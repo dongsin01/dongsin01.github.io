@@ -1,0 +1,253 @@
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #1a1a1a;
+  --bg: #ffffff;
+  --accent: #2563eb;
+  --gray: #6b7280;
+  --light-gray: #f3f4f6;
+  --border: #e5e7eb;
+  --max-width: 960px;
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.site-header .container {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.site-logo {
+  height: 28px;
+  width: auto;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  margin-left: auto;
+  padding-left: 1.5rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.2s;
+}
+
+/* Main */
+main {
+  padding: 3rem 0;
+  min-height: calc(100vh - 160px);
+}
+
+/* Home */
+.home-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.home-photo {
+  flex-shrink: 0;
+}
+
+.photo-placeholder {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+  border: 2px solid var(--border);
+}
+
+.home-text h1 {
+  margin-bottom: 0.5rem;
+}
+
+.home-text p {
+  margin-bottom: 1rem;
+  color: var(--gray);
+}
+
+.home-text a {
+  color: var(--accent);
+}
+
+/* Page */
+.page h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.page h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.page h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page p {
+  margin-bottom: 1rem;
+}
+
+.page ul,
+.page ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.page li {
+  margin-bottom: 0.35rem;
+}
+
+.page a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.page a:hover {
+  text-decoration: underline;
+}
+
+/* University logo */
+.university-logo {
+  height: 48px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+/* List items */
+.list-item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.list-item h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem;
+}
+
+.list-item h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.list-item h2 a:hover {
+  color: var(--accent);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.site-footer p {
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 1rem;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .home-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
