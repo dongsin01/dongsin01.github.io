@@ -13,21 +13,17 @@ theme = 'minimal-academic'
     url = '/about/'
     weight = 2
   [[menus.main]]
-    name = 'Education'
-    url = '/education/'
-    weight = 3
-  [[menus.main]]
     name = 'Research'
     url = '/research/'
-    weight = 4
+    weight = 3
   [[menus.main]]
     name = 'Publications'
     url = '/publications/'
-    weight = 5
+    weight = 4
   [[menus.main]]
     name = 'Contact'
     url = '/contact/'
-    weight = 6
+    weight = 5
 
 [markup]
   [markup.goldmark]

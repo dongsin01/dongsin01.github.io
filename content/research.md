@@ -1,15 +1,15 @@
 ---
-title: "Research"
+title: "Research Interests"
 ---
 
-## Electronic Structure Calculations
+## Development of Electronic Structure Calculation Methods
 
-Description of your work on electronic structure methods — DFT, beyond-DFT approaches, and their applications to real materials.
+Advancing computational methodologies for electronic structure calculations, including density functional theory (DFT) and tight-binding approaches, with a focus on improving their accuracy and efficiency for quantum materials.
 
-## Many-Body Interactions in Solids
+## Electronic Properties of Low-Dimensional Materials
 
-Description of your research on many-body perturbation theory, GW approximation, or related methods for studying correlated electron systems.
+Investigating the electronic structure, collective phenomena, and phase transitions in low-dimensional materials through first-principles and beyond-DFT methods.
 
-## [Additional Research Topic]
+## Many-Body Interactions and Excited States in Solids
 
-Description of any other research directions or collaborative projects.
+Understanding many-body effects and excited-state properties of solids through first-principles calculations.

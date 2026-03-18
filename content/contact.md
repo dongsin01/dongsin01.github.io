@@ -11,5 +11,4 @@ title: "Contact"
 
 ## Address
 
-Department of Physics, Sogang University
 F303B, 35 Baekbeom-ro, Mapo-gu, Seoul 04107, Korea
