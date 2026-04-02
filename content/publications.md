@@ -4,16 +4,9 @@ title: "Publications"
 
 ## Papers
 
-1. **[Paper Title]**
-   *[Author List]*
-   [Journal Name], Volume, Pages ([Year])
-   [arXiv:XXXX.XXXXX](https://arxiv.org/) · [DOI](https://doi.org/)
-
-## Preprints
-
-1. **[Preprint Title]**
-   *[Author List]*
-   [arXiv:XXXX.XXXXX](https://arxiv.org/)
+1. Byunghyun Kim, Ayoung Yuk, Yunyeong Chang, **Dongsin Kim**, Daesung Park, Young Woo Choi\*, Miyoung Kim\*, Moon Sung Kang\*, and Hyobin Yoo\*<br>
+   **Dislocation Networks in Marginally Twisted Bilayer MoS₂**<br>
+   ACS Materials Letters (2026) [DOI](https://doi.org/10.1021/acsmaterialslett.5c01692)
 
 ## Presentations
 
