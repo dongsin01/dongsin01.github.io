@@ -18,6 +18,11 @@ Mar 2026 - Present (Advisor: [Prof. Young Woo Choi](https://yw-choi.github.io/))
 **B.S. in Physics**, Department of Physics, Sogang University, Seoul, Korea
 Mar 2020 - Feb 2026 (Mandatory military service from Feb 2022 to Aug 2023)
 
+## Awards
+
+- **Outstanding Poster Presentation Award**<br>
+  The 22nd KIAS Workshop on Electronic Structure Calculations, Korea Institute for Advanced Study (KIAS), Seoul, Korea, Jul 9–10, 2026
+
 ## Teaching Experience
 
 - **General Physics Laboratory I** (Class 33, 35), Teaching Assistant, Spring 2026
