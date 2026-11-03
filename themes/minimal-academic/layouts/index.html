@@ -1,12 +1,60 @@
 {{ define "main" }}
-<section class="home">
-  <div class="home-intro">
-    <div class="home-photo">
-      <img src="{{ "images/dongsinkim.png" | relURL }}" alt="{{ .Site.Title }}" class="profile-photo" width="160" height="160">
-    </div>
-    <div class="home-text">
-      {{ .Content }}
-    </div>
+<section class="hero">
+  <img src="{{ "images/dongsinkim.png" | relURL }}" alt="{{ .Site.Title }}" class="profile-photo" width="180" height="180">
+  <div class="hero-text">
+    <h1>{{ .Site.Title }}</h1>
+    <p class="hero-role">{{ site.Params.role }}</p>
+    <p class="hero-affil">{{ site.Params.affiliation }}</p>
+    <div class="hero-bio">{{ .Content }}</div>
+    <ul class="social">
+      {{ with site.Params.email }}
+      <li><a href="mailto:{{ . }}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email</a></li>
+      {{ end }}
+      {{ with site.Params.orcid }}
+      <li><a href="https://orcid.org/{{ . }}">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="currentColor"/><text x="12" y="16.2" text-anchor="middle" font-size="11" font-weight="700" font-family="Arial, sans-serif" fill="#fff">iD</text></svg>ORCID</a></li>
+      {{ end }}
+      {{ with site.Params.github }}
+      <li><a href="https://github.com/{{ . }}">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a></li>
+      {{ end }}
+    </ul>
   </div>
 </section>
+
+{{ with .Params.interests }}
+<section class="home-section">
+  <div class="section-head">
+    <h2>Research Interests</h2>
+    <a href="{{ "research/" | relURL }}" class="more">More &rarr;</a>
+  </div>
+  <div class="cards">
+    {{ range . }}
+    <div class="card">
+      <h3>{{ .title }}</h3>
+      <p>{{ .summary }}</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.selected }}
+<section class="home-section">
+  <div class="section-head">
+    <h2>Publications</h2>
+    <a href="{{ "publications/" | relURL }}" class="more">All &rarr;</a>
+  </div>
+  <ul class="pub-list">
+    {{ range . }}
+    <li>
+      <a href="{{ .url }}" class="pub-title">{{ .title | markdownify }}</a>
+      <p class="pub-authors">{{ .authors | markdownify }}</p>
+      <p class="pub-venue"><em>{{ .journal }}</em> {{ .ref }} ({{ .year }})</p>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
 {{ end }}

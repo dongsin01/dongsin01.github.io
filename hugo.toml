@@ -3,6 +3,13 @@ languageCode = 'en-us'
 title = 'Dongsin Kim'
 theme = 'minimal-academic'
 
+[params]
+  role = 'M.S. Student in Physics'
+  affiliation = 'Department of Physics, Sogang University'
+  email = 'dongsin01@sogang.ac.kr'
+  github = 'dongsin4869'
+  orcid = '0009-0002-1838-2142'
+
 [menus]
   [[menus.main]]
     name = 'Home'
