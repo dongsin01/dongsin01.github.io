@@ -118,16 +118,12 @@ main {
   flex-shrink: 0;
 }
 
-.photo-placeholder {
+.profile-photo {
+  display: block;
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: var(--light-gray);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gray);
-  font-size: 0.9rem;
+  object-fit: cover;
   border: 2px solid var(--border);
 }
 
