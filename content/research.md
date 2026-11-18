@@ -4,7 +4,7 @@ title: "Research Interests"
 
 ## Development of Electronic Structure Calculation Methods
 
-Advancing computational methodologies for electronic structure calculations, including density functional theory (DFT) and tight-binding approaches, with a focus on improving their accuracy and efficiency for quantum materials.
+Developing and improving computational methods for electronic structure, including density functional theory (DFT) and tight-binding models, to achieve higher accuracy and efficiency in describing quantum materials.
 
 ## Electronic Properties of Low-Dimensional Materials
 
