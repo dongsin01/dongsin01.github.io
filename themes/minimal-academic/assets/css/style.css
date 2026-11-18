@@ -166,7 +166,8 @@ main.container {
   margin-top: 1.25rem;
 }
 
-.social a {
+.social a,
+.social .email-reveal {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -180,7 +181,19 @@ main.container {
   transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 
-.social a:hover {
+.social .email-reveal {
+  background: none;
+  font-family: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+.social .email-reveal.revealed {
+  user-select: text;
+}
+
+.social a:hover,
+.social .email-reveal:hover {
   border-color: var(--accent);
   color: var(--accent);
   background: var(--accent-soft);
