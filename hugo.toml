@@ -9,6 +9,7 @@ theme = 'minimal-academic'
   email = 'dongsin01@sogang.ac.kr'
   github = 'dongsin4869'
   orcid = '0009-0002-1838-2142'
+  scholar = 'GizgJboAAAAJ'
 
 [menus]
   [[menus.main]]
