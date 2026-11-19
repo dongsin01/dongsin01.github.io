@@ -1,0 +1,155 @@
+% Curriculum Vitae — Dongsin Kim
+% Build: cd cv && xelatex cv.tex   (then copy cv.pdf to static/cv/DongsinKim_CV.pdf)
+% Keep the content in sync with content/about.md and content/publications.md.
+\documentclass[10pt]{article}
+
+\usepackage[a4paper, margin=2cm, top=1.8cm, bottom=1.8cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont{Charter}
+\definecolor{accent}{HTML}{9D2235}
+\definecolor{muted}{HTML}{555555}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.08}
+
+% ---------- macros ----------
+% Ask for #1 of space; break the page first if it isn't available
+\makeatletter
+\newcommand{\needspace}[1]{\par\penalty-100\begingroup
+  \setlength{\dimen@}{#1}\vskip\z@\@plus\dimen@\penalty-100
+  \vskip\z@\@plus-\dimen@\vskip\dimen@\penalty9999\vskip-\dimen@\endgroup}
+\makeatother
+
+% Section heading with a thin rule
+\newcommand{\cvsection}[1]{%
+  \needspace{7\baselineskip}%
+  \vspace{1.1em}%
+  {\large\bfseries\color{accent}#1}\par
+  \vspace{0.25em}{\color{accent!60}\hrule height 0.6pt}\vspace{0.6em}}
+
+% Entry: title (left) | date (right), then details
+\newcommand{\cventry}[3]{%
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & {\color{muted}#2}
+  \end{tabularx}\par
+  \ifx&#3&\else{\vspace{0.1em}#3\par}\fi
+  \vspace{0.6em}}
+
+% Numbered publication / item with hanging indent
+\newcommand{\cvitem}[2]{%
+  \hangindent=1.6em\hangafter=1
+  \makebox[1.6em][l]{#1}#2\par\vspace{0.6em}}
+
+\newcommand{\me}{\textbf{Dongsin Kim}}
+\newcommand{\sub}[1]{\textsubscript{#1}}
+
+\begin{document}
+
+% ---------- header ----------
+{\centering
+  {\fontsize{24}{28}\selectfont\bfseries Dongsin Kim}\par
+  \vspace{0.35em}
+  {\color{muted}M.S. Student in Physics, Department of Physics, Sogang University}\par
+  \vspace{0.2em}
+  {\small\color{muted}F303B, 35 Baekbeom-ro, Mapo-gu, Seoul 04107, Korea}\par
+  \vspace{0.35em}
+  {\small
+    \href{mailto:dongsin01@sogang.ac.kr}{dongsin01@sogang.ac.kr}
+    \enspace$\cdot$\enspace
+    \href{https://dongsin01.github.io/}{dongsin01.github.io}
+    \enspace$\cdot$\enspace
+    \href{https://github.com/dongsin01}{GitHub: dongsin01}\par
+    \vspace{0.15em}
+    \href{https://scholar.google.com/citations?user=GizgJboAAAAJ&hl=en}{Google Scholar}
+    \enspace$\cdot$\enspace
+    \href{https://orcid.org/0009-0002-1838-2142}{ORCID: 0009-0002-1838-2142}\par}
+}
+
+% ---------- education ----------
+\cvsection{Education}
+
+\cventry{M.S. in Physics}{Mar 2026 -- Present}{%
+  Department of Physics, Sogang University, Seoul, Korea\\
+  Advisor: \href{https://yw-choi.github.io/}{Prof. Young Woo Choi}}
+
+\cventry{B.S. in Physics}{Mar 2020 -- Feb 2026}{%
+  Department of Physics, Sogang University, Seoul, Korea\\
+  {\color{muted}Mandatory military service, Feb 2022 -- Aug 2023}}
+
+% ---------- research interests ----------
+\cvsection{Research Interests}
+
+\cvitem{$\bullet$}{\textbf{Development of electronic structure methods} ---
+  improving DFT and tight-binding approaches for accurate and efficient
+  descriptions of quantum materials.}
+\cvitem{$\bullet$}{\textbf{Low-dimensional materials} ---
+  electronic structure, collective phenomena, and phase transitions,
+  studied with first-principles and beyond-DFT methods.}
+\cvitem{$\bullet$}{\textbf{Many-body interactions and excited states} ---
+  many-body effects and excited-state properties of solids from first principles.}
+
+% ---------- publications ----------
+\cvsection{Publications}
+
+{\small\color{muted}$^\dagger$ Equal contribution, \,$^*$ Corresponding author}\par
+\vspace{0.6em}
+
+\cvitem{[2]}{Kimoon Higashihira Han$^\dagger$, Dongju Hwang$^\dagger$, \me$^\dagger$,
+  Yeojin Ahn, Jaehun Cha, Seonggeon Gim, Gyubin Lee, Mingi Jho, Chan-young Lim,
+  Sae Hee Ryu, Chris Jozwiak, Aaron Bostwick, Eli Rotenberg, Jonathan D. Denlinger,
+  Makoto Hashimoto, Donghui Lu, Young Woo Choi$^*$, Gil Young Cho$^*$, and Yeongkwan Kim$^*$,\\
+  ``Unexpected Stabilization of a Single-\textit{q} Charge Density Wave in Pristine
+  1\textit{T}-TiSe\sub{2},''\\
+  \href{https://doi.org/10.1038/s41467-026-78072-0}{\textit{Nat.\ Commun.}\ \textbf{17}, 11220 (2026)}.}
+
+\cvitem{[1]}{Byunghyun Kim$^\dagger$, Ayoung Yuk$^\dagger$, Yunyeong Chang$^\dagger$, \me$^\dagger$,
+  Daesung Park, Young Woo Choi$^*$, Miyoung Kim$^*$, Moon Sung Kang$^*$, and Hyobin Yoo$^*$,\\
+  ``Dislocation Networks in Marginally Twisted Bilayer MoS\sub{2},''\\
+  \href{https://pubs.acs.org/doi/10.1021/acsmaterialslett.5c01692}{\textit{ACS Materials Lett.}\ \textbf{8}, 1382--1388 (2026)}.}
+
+% ---------- presentations ----------
+\cvsection{Presentations}
+
+\cventry{Sequential Charge Density Wave Transitions in 1\textit{T}-TiSe\sub{2} Driven by Vibrational Free Energy}{Oct 2026}{%
+  Contributed talk, Korean Physical Society Fall Meeting, ICC Jeju, Jeju, Korea}
+
+\cventry{Structural Relaxation and Phonons in Moir\'e Materials from an Atomistic Approach}{Aug 2026}{%
+  Poster, Conference on Computational Physics 2026 (CCP2026), Sejong University, Seoul, Korea}
+
+\cventry{Computational Studies of Structural and Vibrational Properties in Moir\'e Materials}{Jul 2026}{%
+  Poster, The 22nd KIAS Workshop on Electronic Structure Calculations, KIAS, Seoul, Korea}
+
+\cventry{Phonon-Entropy-Driven Sequential CDW Transitions in 1\textit{T}-TiSe\sub{2}}{Jul 2026}{%
+  Poster, The 22nd KIAS Workshop on Electronic Structure Calculations, KIAS, Seoul, Korea}
+
+\cventry{Electronic Structure of Twisted Multilayer MoTe\sub{2} from Machine-Learning Assisted First-Principles Calculations}{Dec 2025}{%
+  Poster, ICAMD 2025, BEXCO, Busan, Korea}
+
+% ---------- awards ----------
+\cvsection{Awards}
+
+\cventry{Outstanding Graduate Student}{Oct 2026}{%
+  Department of Physics, Sogang University}
+
+\cventry{Outstanding Poster Presentation Award}{Jul 2026}{%
+  The 22nd KIAS Workshop on Electronic Structure Calculations, KIAS}
+
+\cventry{G-LAMP Undergraduate Research Presentation Award}{Mar 2026}{%
+  Sogang University}
+
+% ---------- teaching ----------
+\cvsection{Teaching Experience}
+
+\cventry{Teaching Assistant, General Physics Laboratory I (Classes 33, 35)}{Spring 2026}{%
+  Department of Physics, Sogang University}
+
+\vfill
+{\centering\footnotesize\color{muted}Last updated: November 2026\par}
+
+\end{document}

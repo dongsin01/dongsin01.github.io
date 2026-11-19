@@ -2,6 +2,8 @@
 title: "About"
 ---
 
+[Download CV (PDF)](/cv/DongsinKim_CV.pdf)
+
 ## Bio
 
 I am a graduate student in condensed matter theory, focusing on electronic structure calculations. My work involves developing and applying computational methods to understand the properties of quantum materials.

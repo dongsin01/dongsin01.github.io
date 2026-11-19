@@ -10,6 +10,7 @@ theme = 'minimal-academic'
   github = 'dongsin01'
   orcid = '0009-0002-1838-2142'
   scholar = 'GizgJboAAAAJ'
+  cv = 'cv/DongsinKim_CV.pdf'
 
 [menus]
   [[menus.main]]
